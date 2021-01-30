@@ -1,0 +1,579 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>PokeBook | {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Pokedex" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+    <!-- color switch -->
+    <link href="{% static 'css/blast.min.css' %}" rel="stylesheet" />
+    <!-- portfolio -->
+    <link href="{% static 'css/portfolio.css' %}" type="text/css" rel="stylesheet" media="all">
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- banner -->
+    <div id="home">
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-lg navbar-light navbar-fixed-top">
+                <h1>
+                    <a class="navbar-brand" href="index.html" data-blast="color">
+                        PokeBook
+                    </a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-lg-auto text-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" data-blast="color">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#about">Historia</a>
+                        </li>
+                        <li class="nav-item mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#stats">Cifras</a>
+                        </li>
+                        <li class="nav-item mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#explore">Explora</a>
+                        </li>
+                        <li class="nav-item  mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#quotes">Quotes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- //header -->
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider3">
+                <li class="banner banner1">
+                    <div class="container">
+                        <div class="banner-text">
+                            <div class="slider-info">
+                                <h3>Juega</h3>
+                                <span class="line"></span>
+                                <p>¡Atrápalos ya!</p>
+                                <a class="btn bg-theme mt-4 w3_pvt-link-bnr scroll" data-blast="bgColor" href="#about"
+                                    role="button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="banner banner2">
+                    <div class="container">
+                        <div class="banner-text">
+                            <div class="slider-info">
+                                <h3>Descubre</h3>
+                                <span class="line"></span>
+                                <p>¡Atrápalos ya!</p>
+                                <a class="btn bg-theme mt-4 w3_pvt-link-bnr scroll" data-blast="bgColor" href="#about"
+                                    role="button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="banner banner3">
+                    <div class="container">
+                        <div class="banner-text">
+                            <div class="slider-info">
+                                <h3>Diviértete</h3>
+                                <span class="line"></span>
+                                <p>¡Atrápalos ya!</p>
+                                <a class="btn bg-theme mt-4 w3_pvt-link-bnr scroll" data-blast="bgColor" href="#about"
+                                    role="button">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!--  about -->
+    <section class="wthree-slide-btm pt-lg-5" id="about">
+        <div class="container pt-sm-5 pt-4">
+            <div class="row no-gutters">
+                <div class="col-lg-5">
+                    <div class="slide-banner">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-abt light-bg">
+                        <div class="container">
+                            <div class="title-desc  pb-sm-3">
+                                <h4 class="main-title-w3pvt">Sobre Pokèmon</h4>
+                                <p>Un poco de contexto.</p>
+                            </div>
+                            <div class="row flex-column mt-lg-4 mt-3">
+                                <div class="abt-grid">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="abt-icon" data-blast="bgColor">
+                                                <span class="fa fa-ravelry"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 pl-sm-0">
+                                            <div class="abt-txt ml-sm-0">
+                                                <h4>Resumen </h4>
+                                                <p>
+                                                    La serie de videojuegos de Pokémon, referida por los fanes como la "saga principal", son videojuegos de rol desarrollados por Game Freak y publicados para videoconsolas portátiles de Nintendo. 
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="abt-grid mt-4 pt-lg-2">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="abt-icon" data-blast="bgColor">
+                                                <span class="fa fa-laptop"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 pl-sm-0">
+                                            <div class="abt-txt ml-sm-0">
+                                                <h4>Modo Historia</h4>
+                                                <p>
+                                                    La serie se divide en generaciones Pokémon, las cuales son los grupos de videojuegos que aparecen en un cierto período y que comparten una serie de características similares, concretamente los personajes y criaturas (Pokémon) y la región donde se sucede la historia.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //about -->
+    <!--  about bottom -->
+    <section class="wthree-slide-btm pb-lg-5">
+        <div class="container pb-md-5 pb-4">
+            <div class="row flex-row-reverse no-gutters">
+                <div class="col-lg-5">
+                    <div class="ab-banner">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-abt">
+                        <div class="container">
+                            <div class="title-desc  pb-sm-3">
+                                <h4 class="main-title-w3pvt">Actualidad</h4>
+                                <p>Ad portas de cumplir 25 años...</p>
+                            </div>
+                            <div class="row flex-column mt-lg-4 mt-3">
+                                <div class="abt-grid">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="abt-icon" data-blast="bgColor">
+                                                <span class="fa fa-ravelry"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 pl-sm-0">
+                                            <div class="abt-txt ml-sm-0">
+                                                <h4>Su Éxito </h4>
+                                                <p>
+                                                    El éxito de los videojuegos que aún se mantiene hasta estos días, hizo que su trama fuera adaptada en un anime producido por los estudios de animación OLM, Inc., el cual es emitido por la cadena de televisión TV Tokyo desde que se estrenó el 1 de abril de 1997.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="abt-grid mt-4 pt-lg-2">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="abt-icon" data-blast="bgColor">
+                                                <span class="fa fa-laptop"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 pl-sm-0">
+                                            <div class="abt-txt ml-sm-0">
+                                                <h4>Sus Controversias</h4>
+                                                <p>
+                                                    El episodio Dennō Senshi Porygon es el más conocido de todos los episodios censurados, debido a que en su emisión en Japón, más de 635 niños fueron hospitalizados debido a que fueron víctimas de ataques epilépticos, por usar efectos visuales en dicho episodio.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //about boottom -->
+    <!-- stats -->
+    <section class="w3_stats py-sm-5 py-4" id="stats">
+        <div class="container">
+            <div class="py-lg-5 w3-stats">
+                <h2 class="w3pvt-title">Sus números
+                </h2>
+                <p class="my-4 text-white">
+                    Las cifras de la franquicia más taquillera de todos los tiempos
+                </p>
+                <div class="row py-4">
+                    <div class="col-md-4 col-6">
+                        <div class="counter">
+                            <span class="fa fa-tv"></span>
+                            <div class="timer count-title count-number mt-2 text-white" data-to="1140" data-speed="800"></div>
+                            <p class="count-text text-uppercase text-white">Episodios</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="counter">
+                            <span class="fa fa-usd"></span>
+                            <div class="timer count-title count-number mt-2 text-white" data-to="4200" data-speed="1200"></div>
+                            <p class="count-text text-uppercase text-white">Millones de Dólares en Ganancias </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 mt-md-0 mt-4">
+                        <div class="counter">
+                            <span class="fa fa-gamepad"></span>
+                            <div class="timer count-title count-number mt-2 text-white" data-to="30" data-speed="1500"></div>
+                            <p class="count-text text-uppercase text-white">Millones de Usuarios</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- //stats -->
+    <!-- slide -->
+    <div class="abt_bottom py-lg-5 bg-theme" data-blast="bgColor" id="explore">
+        <div class="container py-sm-4 py-3">
+            <h4 class="abt-text text-capitalize text-sm-center">Explora el Mundo Pokèmon</h4>
+            <div class="d-sm-flex justify-content-center">
+                <a class="btn light-bg mt-4 w3_pvt-link-bnr scroll bg-theme1" href="#" role="button">
+                    Buscar por Evolución
+                </a>
+                <a class="btn light-bg mt-4 ml-sm-3 w3_pvt-link-bnr" href="#" role="button">
+                    Buscar por Pokèmon
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- //slide -->
+    <!-- pricing plans -->
+    <section class="py-lg-5 py-4" id="plans">
+        <div class="container py-md-5">
+            <div class="title-desc text-center pb-sm-3">
+                <h3 class="main-title-w3pvt">recent projects</h3>
+                <p>helping animals & working on environmental issues.</p>
+            </div>
+            <div class="row price-row">
+                <div class="col-lg-4 col-sm-6 column mb-lg-0 mb-4">
+                    <div class="box" data-blast="borderColor">
+                        <div class="title">
+                            <span class="fa fa-gg" data-blast="color"></span>
+                            <h5 data-blast="color">protecting forests</h5>
+                        </div>
+                        <div class="price">
+                            <h6>funds needed - <sup>$</sup><span class="font-weight-bold">800</span></h6>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li>50 Gb Space</li>
+                                <li>5 Domain Names</li>
+                                <li>20 Email Address</li>
+                                <li>Live Support</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn w3ls-btn bg-theme  d-block" data-toggle="modal" aria-pressed="false"
+                            data-target="#exampleModal" data-blast="bgColor">
+                            donate now
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 column mb-lg-0 mb-4">
+                    <div class="box" data-blast="borderColor">
+                        <div class="title">
+                            <span class="fa fa-money" data-blast="color"></span>
+                            <h5 data-blast="color">rescue rehabilitation</h5>
+                        </div>
+                        <div class="price">
+                            <h6>funds needed - <sup>$</sup><span class="font-weight-bold">1200</span></h6>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li>50 Gb Space</li>
+                                <li>5 Domain Names</li>
+                                <li>20 Email Address</li>
+                                <li>Live Support</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn w3ls-btn bg-theme  d-block" data-toggle="modal" aria-pressed="false"
+                            data-target="#exampleModal" data-blast="bgColor">
+                            donate now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6  mx-auto mt-lg-0 mt-4 column">
+                    <div class="box" data-blast="borderColor">
+                        <div class="title">
+                            <span class="fa fa-gg" data-blast="color"></span>
+                            <h5 data-blast="color">environmental air</h5>
+                        </div>
+                        <div class="price">
+                            <h6>funds needed - <sup>$</sup><span class="font-weight-bold">3000</span></h6>
+                        </div>
+                        <div class="option">
+                            <ul>
+                                <li>50 Gb Space</li>
+                                <li>5 Domain Names</li>
+                                <li>20 Email Address</li>
+                                <li>Live Support</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn w3ls-btn bg-theme  d-block" data-toggle="modal" aria-pressed="false"
+                            data-target="#exampleModal" data-blast="bgColor">
+                            donate now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="testimonials py-lg-5 py-4" id="quotes">
+        <div class="container">
+            <div class="title-desc text-center pb-3">
+                <h3 class="main-title-w3pvt">Quotes</h3>
+                <p>Inspirational quotes.</p>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide py-lg-5" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="testimonials_grid">
+                                    <div class="testi-text text-center">
+                                        <p>
+                                            <span class="fa fa-quote-left"></span>
+                                            We do have a lot in common. The same earth, the same air, the same sky. Maybe if we started looking at what’s the same, instead of looking at what’s different, well, who knows?
+                                            <span class="fa fa-quote-right"></span>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="testi-desc">
+                                            <span class="fa fa-user" data-blast="color"></span>
+                                            <h5>Meowth</h5>
+                                            <p>Pokèmon</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials_grid my-lg-0 my-4">
+                                    <div class="testi-text text-center">
+                                        <p>
+                                            <span class="fa fa-quote-left"></span>
+                                            Even If we don’t understand each other, that’s not a reason to reject each other. There are two sides to any argument. Is there one point of view that has all the answers? Give it some thought.
+                                            <span class="fa fa-quote-right"></span>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="testi-desc">
+                                            <span class="fa fa-user" data-blast="color"></span>
+                                            <h5>Alder</h5>
+                                            <p>Campeón de Liga Pokèmon Unova/Teselia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials_grid">
+                                    <div class="testi-text text-center">
+                                        <p>
+                                            <span class="fa fa-quote-left"></span>
+                                            The important thing is not how long you live. It’s what you accomplish with your life
+                                            <span class="fa fa-quote-right"></span>
+                                        </p>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="testi-desc">
+                                            <span class="fa fa-user" data-blast="color"></span>
+                                            <h5>Grovyle</h5>
+                                            <p>Pokèmon</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //testimonials -->
+    <!-- footer -->
+    <footer class="cpy-right bg-theme" data-blast="bgColor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="wthree-social">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-facebook-f icon_facebook"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-twitter icon_twitter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-google-plus icon_g_plus"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-right mt-lg-0 mt-4">
+                    <p>© 2018 Creature. All rights reserved | Design by
+                        <a href="http://w3layouts.com"> W3layouts.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- // register -->
+    <!-- js -->
+    <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+    <!-- //js -->
+    <!-- script for password match -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- script for password match -->
+    <!-- Banner  Responsiveslides -->
+    <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+    <script>
+        // You can also use"$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider3").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+    </script>
+    <!-- //Banner  Responsiveslides -->
+    <!-- Scrolling Nav JavaScript -->
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'js/counter.js' %}"></script>
+    <!-- portfolio -->
+    <script src="{% static 'js/jquery.picEyes.js' %}"></script>
+    <script>
+        $(function () {
+            //picturesEyes($('.demo li'));
+            $('.demo li').picEyes();
+        });
+    </script>
+    <!-- //portfolio -->
+    <!-- start-smooth-scrolling -->
+    <script src="{% static 'js/move-top.js' %}"></script>
+    <script src="{% static 'js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- //end-smooth-scrolling -->
+    <!-- smooth-scrolling-of-move-up -->
+    <script>
+        $(document).ready(function () {
+            /*
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+            };
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+    <!-- //smooth-scrolling-of-move-up -->
+    <!-- color switch -->
+    <script src="{% static 'js/blast.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+
+</html>
