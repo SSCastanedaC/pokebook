@@ -6,6 +6,9 @@
 
 {% block content %}
 
+
+    </div>
+    
     <!-- stats -->
     <section class="w3_stats py-sm-5 py-4" id="stats">
         <div class="container">
@@ -35,6 +38,8 @@
             <div class="title-desc text-center pb-sm-3">
                 <h3 class="main-title-w3pvt">Resultados</h3>
                 <p>Obtuvimos {{pokemon_list|length}} resultado(s):</p>
+            </div>
+            <div id="myDiagramDiv" style="width:100%; height:400px;">
             </div>
             <div class="row price-row">
                 {% for pokemon in pokemon_list %}
@@ -66,4 +71,85 @@
     {% endif %}
     <!-- //pricing plans -->
     
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+
+//Se crea función para 'capitalizar' un string
+const capitalize = (s) => {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+//Se instancia el gráfico, los nodos y los conectores
+var $ = go.GraphObject.make;
+
+var myDiagram =
+    $(go.Diagram, "myDiagramDiv", {
+        "undoManager.isEnabled": true,
+        layout: $(go.TreeLayout, {
+            angle: 90,
+            layerSpacing: 35
+        })
+    });
+
+myDiagram.nodeTemplate =
+    $(go.Node, "Vertical",
+        $(go.Picture, {
+            margin: 5,
+            width: 50,
+            height: 50,
+        },
+        new go.Binding("source")),
+        $(go.TextBlock, "Default Text", {
+            margin: 12,
+            stroke: "#d3b800",
+            font: "bold 16px sans-serif"
+        },
+        new go.Binding("text", "name"))
+    );
+
+myDiagram.linkTemplate = $(go.Link, {
+        routing: go.Link.Orthogonal,
+        corner: 5
+    },
+    $(go.Shape, {
+        strokeWidth: 3,
+        stroke: "#e2e2e2" 
+    })
+);
+
+var model = $(go.TreeModel);
+
+myDiagram.model = model;
+
+// Se crean variables para almacenar los datos de los pokemones y sus evoluciones
+
+var pokemon_list = {{pokemon_list|safe}}
+var pokemon_chain_evolution = {{pokemon_chain_evolution|safe}}
+
+//Se agregan los nodos al gráfico
+
+pokemon_chain_evolution.map((item, key) => {
+    if(item.evolves_from == 0){
+        myDiagram.model.addNodeData({
+            'key': item.evolves_to,
+            'name': capitalize(item.evolves_to),
+            'source': pokemon_list.find(x => x.name == item.evolves_to).url_image
+        })
+    }
+    else {
+        myDiagram.model.addNodeData({
+            'key': item.evolves_to,
+            'parent': item.evolves_from,
+            'name': capitalize(item.evolves_to),
+            'source': pokemon_list.find(x => x.name == item.evolves_to).url_image
+        })
+    }
+})
+
+</script>
+
 {% endblock %}
