@@ -4,6 +4,45 @@
 
 {% block content %}
 
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- banner -->
+    <div id="home">
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-lg navbar-light navbar-fixed-top">
+                <h1>
+                    <a class="navbar-brand" href="{% url 'pokemon:home' %}" data-blast="color">
+                        PokeBook
+                    </a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-lg-auto text-center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'pokemon:home' %}" data-blast="color">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#about">Historia</a>
+                        </li>
+                        <li class="nav-item mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#stats">Cifras</a>
+                        </li>
+                        <li class="nav-item mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#explore">Explora</a>
+                        </li>
+                        <li class="nav-item  mt-lg-0 mt-3">
+                            <a class="nav-link scroll" href="#quotes">Quotes</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--//header -->
         <div class="callbacks_container">
             <ul class="rslides" id="slider3">
                 <li class="banner banner1">
@@ -207,7 +246,7 @@
         <div class="container py-sm-4 py-3">
             <h4 class="abt-text text-capitalize text-sm-center">Explora el Mundo Pokèmon</h4>
             <div class="d-sm-flex justify-content-center">
-                <a class="btn light-bg mt-4 w3_pvt-link-bnr scroll bg-theme1" href="#" role="button">
+                <a class="btn light-bg mt-4 w3_pvt-link-bnr bg-theme1" href="{% url 'pokemon:evolution-chain' %}" role="button">
                     Buscar por Evolución
                 </a>
                 <a class="btn light-bg mt-4 ml-sm-3 w3_pvt-link-bnr" href="#" role="button">

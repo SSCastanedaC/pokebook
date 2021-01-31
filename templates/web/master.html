@@ -37,51 +37,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- banner -->
-    <div id="home">
-        <!-- header -->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-expand-lg navbar-light navbar-fixed-top">
-                <h1>
-                    <a class="navbar-brand" href="index.html" data-blast="color">
-                        PokeBook
-                    </a>
-                </h1>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-lg-auto text-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html" data-blast="color">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  mt-lg-0 mt-3">
-                            <a class="nav-link scroll" href="#about">Historia</a>
-                        </li>
-                        <li class="nav-item mt-lg-0 mt-3">
-                            <a class="nav-link scroll" href="#stats">Cifras</a>
-                        </li>
-                        <li class="nav-item mt-lg-0 mt-3">
-                            <a class="nav-link scroll" href="#explore">Explora</a>
-                        </li>
-                        <li class="nav-item  mt-lg-0 mt-3">
-                            <a class="nav-link scroll" href="#quotes">Quotes</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!--//header -->
-
     {% block content %}
-
-        
 
     {% endblock %}
 
@@ -216,6 +175,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{% static 'js/bootstrap.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
 </body>
 
 </html>
