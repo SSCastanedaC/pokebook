@@ -13,8 +13,7 @@
     <section class="w3_stats py-sm-5 py-4" id="stats">
         <div class="container">
             <div class="py-lg-5 w3-stats">
-                <h2 class="w3pvt-title">Explorar
-                </h2>
+                <h2 class="w3pvt-title"><a href="{% url 'pokemon:home' %}"><span class="fa fa-angle-left" style="color: #d3b800;"></span></a> Explorar</h2>
                 <p class="my-4 text-white">
                     Buscar cadenas de evolución
                 </p>
@@ -22,7 +21,7 @@
                     <form method="POST">
                         {% csrf_token %}
                         <input class="input-lg" type="number" min="1" max="475" placeholder="Ingresa un número" name="evolution_chain_id" value="{{evolution_chain_id}}" required>
-                        <button class="btn btn-primary" type="submit">
+                        <button class="btn btn-warning" type="submit">
                             <span class="fa fa-search"></span>
                         </button>
                     </form>
