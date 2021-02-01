@@ -84,17 +84,13 @@ WSGI_APPLICATION = 'pokedex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pokedex',
-        'USER': 'postgres',
-        'PASSWORD': 'pass',
-        'HOST': 'localhost',
+        'NAME': 'd8hdl2sgkqqn8d',
+        'USER': 'axgpvraculikfh',
+        'PASSWORD': 'df473bd19c7ef64a296b294dd602edc8c2c952fe76768d2c99d5aacfb7e28707',
+        'HOST': 'ec2-52-70-135-246.compute-1.amazonaws.com',
         'PORT': 5432
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES = {}
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
