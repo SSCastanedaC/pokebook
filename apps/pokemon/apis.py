@@ -10,6 +10,14 @@ import pandas as pd
 def search_pokemon(request):
     try:
         name = request.data['name']
+        """
+        Debido a que el nombre ingresado puede que no sea exacto, se utiliza una búsqueda
+        trigram_similar con el objetivo de mejorar la precisión.
+        Por ejemplo: si escribimos 'Bolvasaur' en lugar del nombre correcto 'bulbasaur',
+        el algoritmo tiene la capacidad para identificar el nombre del pokemon
+        Para más información:
+        https://docs.djangoproject.com/en/2.2/ref/contrib/postgres/lookups/#trigram-similarity
+        """
         pokemon = Pokemon.objects.get(name__trigram_similar = name)
         pokemon_data = {}
         pokemon_data['id'] = pokemon.pokeapi_id
